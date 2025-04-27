@@ -1,0 +1,41 @@
+{
+    "name": "caprine-log-viewer",
+    "version": "1.0.0",
+    "description": "Fetch and display logs from a given Cribl endpoint",
+    "type": "module",
+    "keywords": [
+        "react",
+        "javascript",
+        "typescript"
+    ],
+    "main": "src/index.js",
+    "dependencies": {
+        "echarts-for-react": "^3.0.2",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^6.6.3",
+        "@testing-library/react": "^16.3.0",
+        "@testing-library/user-event": "^14.6.1",
+        "@types/jest": "^29.5.14",
+        "@types/react": "19.0.0",
+        "@types/react-dom": "19.0.0",
+        "jest-canvas-mock": "^2.5.2",
+        "loader-utils": "3.2.1",
+        "react-scripts": "^5.0.1",
+        "util": "^0.12.5"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ]
+}
