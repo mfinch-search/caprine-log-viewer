@@ -1,6 +1,6 @@
 const sampleData: Log[] = [
-    { _time: '123', goatFact: 'They have 4 legs' },
-    { _time: '456', goatFact2: 'They have 2 eyes' }
+    { _time: '1724323504596', goatFact: 'They have 4 legs' },
+    { _time: '1724323468596', goatFact2: 'They have 2 eyes' }
 ]
 
 jest.mock('./lib/actions', () => ({
@@ -36,7 +36,7 @@ test('should render', async () => {
 
     expect(screen.getAllByRole('row').length).toEqual(sampleData.length + 1);
     for (const event of sampleData) {
-        expect(screen.getByText(event._time)).toBeDefined()
+        expect(screen.getByText(new Date(+event._time).toISOString())).toBeDefined()
         expect(screen.getByText(JSON.stringify(event))).toBeDefined()
     }
 

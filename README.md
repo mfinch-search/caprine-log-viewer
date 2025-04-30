@@ -13,7 +13,6 @@ and then boot up the application with `npm run start`
 This is made more as a proof of concept than something that should be run in production.
 
 ### What does it use?
-* Bulma - It's a css only library that I really like since it provides some great helper classes and basic styling for elements without having to specify too much extra css. Plus they love flexbox as much as I do.
 * Apache ECharts - Creating a canvas and properly drawing bars based on grouped data was a little more time than I'm able to use
 
 

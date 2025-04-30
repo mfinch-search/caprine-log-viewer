@@ -6,3 +6,58 @@
 .no-wrap {
     white-space:pre
 }
+
+.title {
+    font-size: 1.2rem;
+}
+
+.sutitle::after {
+    font-size: 1rem;
+}
+
+.has-text-centered {
+    text-align: center
+}
+
+.has-text-left {
+    text-align: left
+}
+
+
+tbody tr:nth-of-type(odd) {
+    background-color: lightgrey;
+}
+
+tbody tr td {
+    padding: 5px;
+}
+
+.button {
+    padding:
+}
+
+.is-text {
+    border: none
+}
+
+.mr-1 {
+    margin-right: 0.4rem;
+}
+
+.is-flex-apart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.is-6 {
+    font-size: 0.8rem;
+}
+
+.is-7 {
+    font-size: 0.6rem
+}
+
+thead tr {
+    border: solid grey 1px;
+}
+

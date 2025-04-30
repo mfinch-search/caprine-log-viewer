@@ -1,13 +1,13 @@
 import LogEventTableRow from './LogEventTableRow';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event'
-import type { Log } from '../../lib/types';
+import type { Log } from '../lib/types';
 
 
 
 test('Should render a table row', async () => {
     const sampleLog: Log = {
-        _time: '123456789',
+        _time: '1724323612592',
         otherParam: 'Hello World!',
         goatEntity: 'Is watching, judging'
     }
@@ -16,13 +16,13 @@ test('Should render a table row', async () => {
 
     expect(screen.getByRole('row')).toBeDefined();
     expect(screen.getByRole('button')).toBeDefined();
-    expect(screen.getByText(sampleLog._time)).toBeDefined();
+    expect(screen.getByText(new Date(+sampleLog._time).toISOString())).toBeDefined();
     expect(screen.getByText(JSON.stringify(sampleLog))).toBeDefined()
 });
 
 test('Should expand and collapse a table row', async () => {
     const sampleLog: Log = {
-        _time: '123456789',
+        _time: '1724323576596',
         otherParam: 'Hello World!',
         goatEntity: 'Is watching, judging'
     }
