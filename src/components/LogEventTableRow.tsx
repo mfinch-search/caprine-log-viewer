@@ -1,10 +1,10 @@
 ﻿import type { Log } from "../lib/types";
-import { useState } from "react";
+import { useState, memo } from "react";
 
 const UNICODE_RIGHT_ARROW = '\u{1F782}'
 const UNICODE_DOWN_ARROW = '\u{1F783}'
 
-export default function LogEventTableRow({ logEvent }: { logEvent: Log }) {
+const LogEventTableRow = memo( ({ logEvent }: { logEvent: Log }) => {
     const [isExpanded, setExpanded] = useState<boolean>(false)
 
     function toggleExpansion() {
@@ -29,4 +29,6 @@ export default function LogEventTableRow({ logEvent }: { logEvent: Log }) {
             }
         </tr>
     )
-}
+})
+
+export default LogEventTableRow                    

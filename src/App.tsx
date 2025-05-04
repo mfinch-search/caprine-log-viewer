@@ -15,11 +15,11 @@ export default function App() {
         await new Promise(resolve => requestAnimationFrame(resolve))
     }
 
-    const logTableRows = logs.map((log: Log, index: number) => {
+    function createLogTableRows(log: Log, index: number) {
         return (
             <LogEventTableRow logEvent={log} key={`${log._time} - ${index}`} />
         )
-    })
+    }
 
     useEffect(() => {
         const abortController = new AbortController()
@@ -99,7 +99,7 @@ export default function App() {
                     </tr>
                 </thead>
                 <tbody >
-                    {logTableRows}
+                    {logs.map(createLogTableRows) }
                 </tbody>
             </table>
         </div>
